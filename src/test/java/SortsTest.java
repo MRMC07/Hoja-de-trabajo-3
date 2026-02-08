@@ -6,6 +6,8 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import Sorts;
+
 public class SortsTest {
 
     private Integer[] randomArray(int n, long seed) {
