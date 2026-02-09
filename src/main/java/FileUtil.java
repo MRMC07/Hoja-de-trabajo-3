@@ -1,6 +1,10 @@
-package main.java;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,10 +31,10 @@ public class FileUtil {
             String line;
             while ((line = br.readLine()) != null) {
                 line = line.trim();
-                if (!line.isEmpty()) list.add(Integer.parseInt(line));
+                if (!line.isEmpty()) list.add(Integer.valueOf(line));
             }
         }
-        return list.toArray(new Integer[0]);
+        return list.toArray(Integer[]::new);
     }
 
     public static void writeCsvHeaderIfNeeded(String csvPath) throws IOException {
